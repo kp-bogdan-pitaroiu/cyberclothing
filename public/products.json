@@ -1,0 +1,143 @@
+[
+  {
+    "name": "Rochie roz",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"1"
+  },
+  {
+    "name": "Rochie roz 1",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"1"
+  },
+  {
+    "name": "Rochie roz 2",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"1"
+  },
+  {
+    "name": "Rochie roz 3",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"1"
+  },
+  {
+    "name": "Rochie roz 4",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"1"
+  },
+  {
+    "name": "Rochie roz 5",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"1"
+  },
+  {
+    "name": "Rochie roz 6",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"1"
+  },
+  {
+    "name": "Rochie roz 7",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"2"
+  },
+  {
+    "name": "Rochie roz 8",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"2"
+  },
+  {
+    "name": "Rochie roz 8",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"2"
+  },
+  {
+    "name": "Rochie roz 10",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"3"
+  },
+  {
+    "name": "Rochie roz 9",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"3"
+  },
+  {
+    "name": "Rochie roz 11",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"4"
+  },
+  {
+    "name": "Rochie roz 12",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"4"
+  },
+  {
+    "name": "Rochie roz 13",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"4"
+  },
+  {
+    "name": "Rochie roz 13",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"4"
+  },
+  {
+    "name": "Rochie roz 13",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"5"
+  },
+  {
+    "name": "Rochie roz 13",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"5"
+  },
+  {
+    "name": "Rochie roz 13",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"5"
+  },
+  {
+    "name": "Rochie roz 13",
+    "price": 22.5,
+    "Descripiton": "Acesta este o rochie roz care este vandur de un comerciant",
+    "photo": "./rochie-roz.jpeg",
+    "vendorId":"5"
+  }
+  
+]

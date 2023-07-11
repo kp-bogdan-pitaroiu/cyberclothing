@@ -1,0 +1,32 @@
+[
+    {
+        "id":"1",
+        "email":"andrei.manolea@gmail.com",
+        "password":"123Andrei1234"
+    },
+    {
+        "id":"2",
+        "email":"cosmin.manolea@gmail.com",
+        "password":"123Cosmin1234"
+    },
+    {
+        "id":"3",
+        "email":"bogdan.pitaroiu@gmail.com",
+        "password":"123Andrei1234"
+    },
+    {
+        "id":"4",
+        "email":"cristian.dascalu@gmail.com",
+        "password":"123Andrei1234"
+    },
+    {
+        "id":"5",
+        "email":"tudor.zamfir@gmail.com",
+        "password":"123Tudor1234"
+    },
+    {
+        "id":"6",
+        "email":"cafea.tucano@gmail.com",
+        "password":"123Andrei1234"
+    }
+]
