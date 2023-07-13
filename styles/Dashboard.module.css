@@ -1,0 +1,33 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: white;
+    font-family: work-Sans, sans-serif;
+    padding-top: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    color: black;
+
+}
+
+.name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #5098f8;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.pos {
+    font-size: 10px;
+    font-weight: 600;
+    color: #333;
+    padding-bottom: 5px;
+}
