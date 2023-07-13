@@ -1,0 +1,71 @@
+.head {
+    padding-top: 18px;
+    padding-right: 18px;
+    padding-bottom: 18px;
+    padding-left: 18px; 
+    background: #dcdced;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(183, 183, 190);
+    line-height: normal;
+    position: relative;
+    border-right: 1px solid rgba(0, 0, 0, .05);
+    justify-content: center;
+}
+
+.element {
+    flex: 245.562 0 auto;
+    flex-grow: 245.562;
+    flex-shrink: 0;
+    flex-basis: auto;
+    width: 245.562px;
+    max-width: 245.562px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: rgba(o, 0, 0, 0.05);
+    text-overflow: ellipsis;
+    justify-content: center;
+}
+
+.tableHeader {
+   padding: 6px;
+   background-color: white !important;
+   border: 1px solid rgb(230, 228, 228);
+}
+
+.tableHeader b {
+    background-color: rgb(233, 230, 230) !important;
+    display: block;
+}
+
+.body {
+    border: 1px solid grey;
+    position: relative;
+}
+
+.status {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.fa-circle::before {
+    content: "";
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
