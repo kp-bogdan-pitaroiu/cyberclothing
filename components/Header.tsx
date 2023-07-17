@@ -389,9 +389,7 @@ export default function Header() {
             <div className={styles.section}>
                 <ul className={styles.ul}>
                     <li>
-                        <div className={styles.zoom}>
-                            <img src="https://react.pixelstrap.com/multikart/assets/images/sub-banner1.jpg"></img>
-                        </div>
+                        <img src="https://react.pixelstrap.com/multikart/assets/images/sub-banner1.jpg"></img>
                         <div className={styles.li}>
                             <h4>SAVE 30%</h4>
                             <h2>MEN</h2>
