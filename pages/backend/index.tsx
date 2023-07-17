@@ -1,6 +1,4 @@
 import Dashboard from '@/components/Dashboard'
-import Table from '@/components/Table'
-
 
 //  Task 1: Create Produts Tabel Catalin
 //  https://react.pixelstrap.com/multikart-admin/products/physical/sub-category
