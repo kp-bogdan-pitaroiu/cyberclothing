@@ -39,6 +39,7 @@ const BasicTable = () => {
         aria-label="simple table"
       >
         <TableHead className={styles.head}>
+          <h2>Product Sub Category</h2>
           <TableRow className={styles.element}>
             <TableCell align="center" className={styles.tableHeader}>
               <b>Image</b>

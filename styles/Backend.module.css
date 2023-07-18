@@ -1,0 +1,11 @@
+.main {
+    display: flex;
+}
+.pages {
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
+ align-items: end;
+ background-color: white;
+ padding: 5px;
+}

@@ -15,7 +15,7 @@ export interface TableRowData {
         key: 1,
         productName: "Steering Wheels",
         price: 159,
-        status: "orange",
+        status: "yellow",
         category: "Electronics"
     },
     {

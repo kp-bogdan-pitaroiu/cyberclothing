@@ -17,6 +17,12 @@
   border-right: 1px solid rgba(162, 159, 159, 0.484);
   justify-content: center;
 }
+.head h2 {
+  background-color: white;
+  letter-spacing: .05em;
+  position: relative;
+  padding: 5px;
+}
 
 .element {
   flex: 245.562 0 auto;
@@ -154,13 +160,13 @@
   border-radius: 50%;
   margin: 0 auto;
 }
-.orange {
+.orange{
   background-color: orange;
 }
-.green {
+.green{
   background-color: green;
 }
-.gray {
+.gray{
   background-color: gray;
 }
 .cos {
