@@ -5,14 +5,26 @@
     align-items: start;
     background-color: white;
     font-family: work-Sans, sans-serif;
-    padding-top: 10px;
+    padding-top: 15px;
+    width: 255px;
+}
+
+.userProfile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid #d3d3d3;
+    padding: 20px 0;
 }
 
 .content {
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
+    align-items: flex-start;
     color: black;
 
 }
@@ -26,8 +38,17 @@
 }
 
 .pos {
+    display: flex;
+    justify-content: center;
     font-size: 10px;
     font-weight: 600;
     color: #333;
     padding-bottom: 5px;
+    width: 80%;
+}
+
+.btn:hover {
+    padding-left: 18px;
+    color: #5098f8;
+    transition: .3s;
 }
