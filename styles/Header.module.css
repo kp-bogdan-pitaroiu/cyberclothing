@@ -152,7 +152,7 @@
     justify-content: center;
     align-items: center;
     color: black;
-    margin-top: -28%;
+    margin-top: -30%;
     padding-left: 340px;
     padding-bottom: 150px;
 }
@@ -180,27 +180,9 @@
 }
 
 @media only screen and (max-width: 1660px) {
-    .btnSN {
-        margin-left: 46.5%;
-        margin-right: 46.5%;
-    }
-
     .section {
-        padding-top: 0;
-        margin-top: -2.8%;
-    }
-
-    .description {
-        padding-bottom: 17.2%;
-    }
-
-
-    .ul {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .li {
-        margin-top: -25%;
+        justify-content: space-between;
+        padding-left: 14.8%;
+        padding-right: 18%;
     }
 }
