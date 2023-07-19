@@ -18,7 +18,7 @@ export default function Backend() {
       
       <Dashboard />
   <div className={styles.pages}>
-      <SubcategoryPopup/>
+      <SubcategoryPopup variant="table"/>
     <div>
       <BasicTable />
     </div>

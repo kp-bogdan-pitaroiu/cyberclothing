@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Button, Dialog, DialogTitle, DialogContent, TextField, DialogActions } from "@mui/material";
 
-const SubcategoryPopup = () => {
+const SubcategoryPopup = ({variant}: {variant: string}) => {
   const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
     setOpen(true);
@@ -9,7 +9,7 @@ const SubcategoryPopup = () => {
   const handleClose = () => {
     setOpen(false);
   };
-
+console.log(variant);
   return (
     <div>
       <Button variant="contained" color="primary" onClick={handleClickOpen}>

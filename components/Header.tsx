@@ -4,8 +4,8 @@ import styles from '@/styles/Header.module.css';
 import Image from 'next/image';
 import logo from '@/components/img/img1.svg';
 import { Paper, Button, Menu, MenuItem, MenuList, makeStyles } from '@mui/material';
-import { Search, ShoppingBasketOutlined, KeyboardArrowDown } from '@mui/icons-material'
-import Carousel from 'react-material-ui-carousel'
+import { Search, ShoppingBasketOutlined, KeyboardArrowDown } from '@mui/icons-material';
+import Carousel from 'react-material-ui-carousel';
 
 
 export default function Header() {

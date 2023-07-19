@@ -8,14 +8,14 @@ export interface TableRowData {
     status: string;
     category: string;
   }
-  
+ 
   export const rows: TableRowData[] = [
     {
         image: "/img/rochie-roz.jpeg",
         key: 1,
         productName: "Steering Wheels",
         price: 159,
-        status: "yellow",
+        status: "orange",
         category: "Electronics"
     },
     {

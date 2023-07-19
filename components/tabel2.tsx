@@ -12,7 +12,8 @@ import { rows } from "./tablerows";
 import { Button } from "@mui/material";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import CreateOutlinedIcon from "@mui/icons-material/CreateOutlined";
-
+import cerculete from "@/styles/CerculeteColorate.module.css";
+import { Modal } from "./Modal";
 
 const BasicTable = () => {
   const [page, setPage] = React.useState(0);
@@ -31,6 +32,7 @@ const BasicTable = () => {
     setData(data.filter(el => el.key !== index))
     console.log("%c delete", "color: blue" );
   };
+ 
   return (
     <TableContainer component={Paper}>
       <Table
@@ -72,12 +74,13 @@ const BasicTable = () => {
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
                   <TableCell component="th" scope="row">
+                    
                     <img src={row.image} className={styles.thumb} />
                   </TableCell>
                   <TableCell align="center">{row.productName}</TableCell>
                   <TableCell align="center">{row.price}</TableCell>
                   <TableCell align="center">
-                    <span className={styles[row.status]}></span>
+                    <span className={`${cerculete.cercul} ${cerculete[row.status]}`}></span>
                   </TableCell>
                   <TableCell align="center">{row.category}</TableCell>
                   <TableCell align="center">
