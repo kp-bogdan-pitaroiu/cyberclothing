@@ -181,8 +181,21 @@
 
 @media only screen and (max-width: 1660px) {
     .section {
-        justify-content: space-between;
-        padding-left: 14.8%;
-        padding-right: 18%;
+        padding-top: 0;
+
+    }
+
+    .description {
+        padding-bottom: 17%;
+    }
+
+    .ul {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .btnSN {
+        margin-left: 46%;
+        margin-right: 46%;
     }
 }

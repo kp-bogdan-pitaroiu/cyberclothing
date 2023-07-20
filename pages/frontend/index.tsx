@@ -1,11 +1,11 @@
 import React from 'react'
-import Header from '@/components/Header'
+import Homepage from '@/components/Homepage'
 import Products from '@/components/Products'
 
 const index = () => {
     return (
         <>
-            <Header />
+            <Homepage />
             <Products />
         </>
     )

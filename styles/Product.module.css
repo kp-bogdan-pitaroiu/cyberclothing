@@ -135,6 +135,7 @@
     padding-left: 30%;
     padding-right: 30%;
     background-color: white;
+    padding-bottom: 20px;
 }
 
 .description h2 {
@@ -272,6 +273,7 @@
 .size {
     list-style: none;
     display: flex;
+    padding-bottom: 15px;
 }
 
 .sizebtn {
@@ -290,6 +292,19 @@
     .description {
         padding-left: 22.5%;
         padding-right: 22.5%;
+    }
+
+}
+
+@media only screen and (min-width: 2000px) {
+    .section {
+        justify-content: space-evenly;
+    }
+
+    .description {
+        padding-left: 34.3%;
+        padding-right: 34.3%;
+        padding-bottom: 108px;
     }
 
 }

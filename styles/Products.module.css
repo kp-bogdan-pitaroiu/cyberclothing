@@ -42,6 +42,7 @@
 
 .ul {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     background-color: white;
     justify-content: space-evenly;
@@ -57,7 +58,6 @@
     width: 100%;
     flex: 0 0 25%;
     margin: 0 15px 30px;
-    max-width: calc(25% - 30px);
 }
 
 .li img {
@@ -95,7 +95,7 @@
 
 @media only screen and (max-width: 1660px) {
     .ul {
-        padding-left: 3%;
-        padding-right: 3%;
+        padding-left: 2.2%;
+        padding-right: 2.2%;
     }
 }
