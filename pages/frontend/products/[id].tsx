@@ -17,7 +17,7 @@ type Product = {
 
 export default function Product() {
 
-    const [product, setProduct] = useState<Product>({});
+    const [product, setProduct] = useState<Product>();
     const router = useRouter()
 
     useEffect(() => {
@@ -41,7 +41,7 @@ export default function Product() {
             </Head>
             <Header />
             <div className={styles.section}>
-                <h2>{product.name}</h2>
+                <h2>{product?.name}</h2>
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link color="inherit" href="/frontend">
                         HOME
@@ -52,15 +52,15 @@ export default function Product() {
                     >
                         PRODUCTS
                     </Link>
-                    <Typography color="text.primary">{product.name}</Typography>
+                    <Typography color="text.primary">{product?.name}</Typography>
                 </Breadcrumbs>
             </div>
             <div className={styles.product}>
                 <div className={styles.ul}>
-                    <img src={product.photo}></img>
+                    <img src={product?.photo}></img>
                     <ul className={styles.li}>
-                        <li><h2>{product.name}</h2></li>
-                        <li><h4>{product.price}</h4></li>
+                        <li><h2>{product?.name}</h2></li>
+                        <li><h4>{product?.price}</h4></li>
                         <li><h3>Select Size</h3></li>
                         <li>
                             <ul className={styles.size}>
@@ -86,7 +86,7 @@ export default function Product() {
                         <li><Increment /></li>
                         <li><Button variant='contained' size='large' className={styles.btnAC}>ADD TO CART</Button></li>
                         <li><h1>Product Details</h1></li>
-                        <li><div className={styles.p}><p>{product.description}</p></div></li>
+                        <li><div className={styles.p}><p>{product?.description}</p></div></li>
                     </ul>
                 </div>
             </div>
