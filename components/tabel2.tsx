@@ -13,7 +13,9 @@ import { Button } from "@mui/material";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import CreateOutlinedIcon from "@mui/icons-material/CreateOutlined";
 import cerculete from "@/styles/CerculeteColorate.module.css";
-import { Modal } from "./Modal";
+import SubcategoryPopup from "./popupbutton";
+import { DataObject } from "@mui/icons-material";
+
 
 const BasicTable = () => {
   const [page, setPage] = React.useState(0);
@@ -30,8 +32,9 @@ const BasicTable = () => {
   };
   const deleteTableRaw = (index: any) => {
     setData(data.filter(el => el.key !== index))
-    console.log("%c delete", "color: blue" );
+    console.log("%c delete", "color: blue" ); 
   };
+  
  
   return (
     <TableContainer component={Paper}>
@@ -87,9 +90,10 @@ const BasicTable = () => {
                     <Button onClick={() => deleteTableRaw(row.key)} className={styles.cos}>
                       <DeleteOutlineIcon />
                     </Button>
-                    <Button className={styles.creion}>
+                    {/* <Button onClick={()=> contentEditable(row.key)} className={styles.creion}>
                       <CreateOutlinedIcon />
-                    </Button>
+                    </Button> */}
+                    <SubcategoryPopup variant="pencil"  />
                   </TableCell>
                 </TableRow>
               );
