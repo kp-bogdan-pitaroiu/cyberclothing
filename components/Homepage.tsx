@@ -26,7 +26,6 @@ export default function Homepage() {
                         </div>
                     </li>
                 </ul>
-
             </div>
         </>
 
