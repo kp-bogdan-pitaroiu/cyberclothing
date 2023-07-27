@@ -100,3 +100,10 @@
         padding-right: 2.2%;
     }
 }
+
+@media screen and (max-width: 1920px) and (min-width: 1660px) {
+    .ul {
+        padding-left: 13%;
+        padding-right: 13%;
+    }
+}

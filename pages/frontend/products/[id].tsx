@@ -4,8 +4,10 @@ import Header from '@/components/Header';
 import Link from 'next/link';
 import styles from '@/styles/Product.module.css';
 import { Box, Button, Breadcrumbs, Typography, Tooltip, IconButton, Icon, Table, TableBody, TableCell, TableContainer, TableRow, Paper } from '@mui/material';
-import { Add, Remove } from '@mui/icons-material';
-import { useRouter } from 'next/router';
+import { Add, Remove, } from '@mui/icons-material'
+import { useRouter } from 'next/router'
+import Footer from '@/components/Footer'
+
 
 type Product = {
     id: number;
@@ -122,6 +124,7 @@ export default function Product() {
                 <h2>DESCRIPTION</h2>
                 <BasicTable />
             </div>
+            <Footer />
         </>
     );
 }
