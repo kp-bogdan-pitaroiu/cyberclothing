@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
-import Header from '@/components/Header'
-import Link from 'next/link'
+import Header from '@/components/Header';
+import Link from 'next/link';
 import styles from '@/styles/Product.module.css';
-import { Button, Breadcrumbs, Typography, Tooltip, IconButton, Icon, Table, TableBody, TableCell, TableContainer, TableRow, Paper } from '@mui/material';
+import { Box, Button, Breadcrumbs, Typography, Tooltip, IconButton, Icon, Table, TableBody, TableCell, TableContainer, TableRow, Paper } from '@mui/material';
 import { Add, Remove, } from '@mui/icons-material'
 import { useRouter } from 'next/router'
 import Footer from '@/components/Footer'
@@ -13,26 +13,37 @@ type Product = {
     id: number;
     photo: string;
     name: string;
-    price: string;
+    price: number;
     description: string;
 };
 
 export default function Product() {
-
-    const [product, setProduct] = useState<Product>();
-    const router = useRouter()
+    const [product, setProduct] = useState<Product | undefined>();
+    const [quantity, setQuantity] = useState(1);
+    const router = useRouter();
 
     useEffect(() => {
-        console.log('id', router.query.id)
         fetch('../../products.json')
             .then((response) => response.json())
             .then((data) => {
-                const result = data.products.filter((product: any) => { return product.id == router.query.id });
-                console.log(result)
-                setProduct(result[0])
+                const result = data.products.filter((product: any) => product.id == router.query.id);
+                setProduct(result[0]);
             })
             .catch((error) => console.error('Error fetching products:', error));
     }, [router.query.id]);
+
+    const addToCart = () => {
+        const cartItems = JSON.parse(localStorage.getItem('cart') || '');
+        const newItem = {
+            id: product?.id,
+            image: product?.photo,
+            name: product?.name,
+            price: product?.price,
+            quantity: quantity,
+        };
+        cartItems.push(newItem);
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+    };
 
     return (
         <>
@@ -48,10 +59,7 @@ export default function Product() {
                     <Link color="inherit" href="/frontend">
                         HOME
                     </Link>
-                    <Link
-                        color="inherit"
-                        href="/frontend"
-                    >
+                    <Link color="inherit" href="/frontend">
                         PRODUCTS
                     </Link>
                     <Typography color="text.primary">{product?.name}</Typography>
@@ -59,11 +67,17 @@ export default function Product() {
             </div>
             <div className={styles.product}>
                 <div className={styles.ul}>
-                    <img src={product?.photo}></img>
+                    <img src={product?.photo} alt={product?.name} />
                     <ul className={styles.li}>
-                        <li><h2>{product?.name}</h2></li>
-                        <li><h4>{product?.price}</h4></li>
-                        <li><h3>Select Size</h3></li>
+                        <li>
+                            <h2>{product?.name}</h2>
+                        </li>
+                        <li>
+                            <h4>${product?.price}</h4>
+                        </li>
+                        <li>
+                            <h3>Select Size</h3>
+                        </li>
                         <li>
                             <ul className={styles.size}>
                                 <li>
@@ -83,12 +97,28 @@ export default function Product() {
                                 </li>
                             </ul>
                         </li>
-                        <li><h5>InStock</h5></li>
-                        <li><h6>Quantity</h6></li>
-                        <li><Increment /></li>
-                        <li><Button variant='contained' size='large' className={styles.btnAC}>ADD TO CART</Button></li>
-                        <li><h1>Product Details</h1></li>
-                        <li><div className={styles.p}><p>{product?.description}</p></div></li>
+                        <li>
+                            <h5>InStock</h5>
+                        </li>
+                        <li>
+                            <h6>Quantity</h6>
+                        </li>
+                        <li>
+                            <Increment setQuantity={setQuantity} quantity={quantity} />
+                        </li>
+                        <li>
+                            <Button variant="contained" size="large" className={styles.btnAC} onClick={addToCart}>
+                                ADD TO CART
+                            </Button>
+                        </li>
+                        <li>
+                            <h1>Product Details</h1>
+                        </li>
+                        <li>
+                            <div className={styles.p}>
+                                <p>{product?.description}</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -101,59 +131,59 @@ export default function Product() {
     );
 }
 
-const Increment = () => {
-    const [count, setCount] = useState(1);
+const Increment = ({ setQuantity, quantity }: { setQuantity: any; quantity: number }) => {
     const IncNum = () => {
-        setCount(count + 1);
+        setQuantity(quantity + 1);
     };
+
     const DecNum = () => {
-        if (count > 1) setCount(count - 1);
-        else {
-            setCount(1);
-        }
+        if (quantity > 1) setQuantity(quantity - 1);
     };
+
     return (
         <>
             <div className={styles.btndiv}>
-                <Tooltip title="Delete">
-                    <Button onClick={DecNum}>
-                        <Remove />
-                    </Button>
-                </Tooltip>
-                <div className={styles.increment}>{count}</div>
-                <Button onClick={IncNum}>
-                    <Add />
-                </Button>
+                <Box component="span" sx={{ mb: '5px', mt: '5px', bgcolor: 'white', border: '1px solid #777', borderRadius: '2px' }}>
+                    <div className={styles.btndiv}>
+                        <Tooltip title="Delete Item">
+                            <Button style={{ backgroundColor: 'transparent' }} onClick={DecNum}>
+                                <Remove />
+                            </Button>
+                        </Tooltip>
+                        <div className={styles.increment}>{quantity}</div>
+                        <Tooltip title="Add Item">
+                            <Button style={{ backgroundColor: 'transparent' }} onClick={IncNum}>
+                                <Add />
+                            </Button>
+                        </Tooltip>
+                    </div>
+                </Box>
             </div>
         </>
     );
 };
 
-function createData(
-    name: string,
-    description: string,
-) {
+function createData(name: string, description: string) {
     return { name, description };
 }
+
 const rows = [
-    createData("Ideal For :", "Women's"),
-    createData("Pattern :", "Embroidered"),
-    createData("Dress Fabric :", "Silk"),
-    createData("Type :", "Ghagra, Choli, Dupatta Set"),
-    createData("Neck :", "Round Neck"),
-    createData("Sleeve :", "3/4 Sleeve"),
-    createData("Work :", "N/A"),
+    createData('Ideal For :', "Women's"),
+    createData('Pattern :', 'Embroidered'),
+    createData('Dress Fabric :', 'Silk'),
+    createData('Type :', 'Ghagra, Choli, Dupatta Set'),
+    createData('Neck :', 'Round Neck'),
+    createData('Sleeve :', '3/4 Sleeve'),
+    createData('Work :', 'N/A'),
 ];
+
 function BasicTable() {
     return (
         <TableContainer component={Paper}>
             <Table sx={{ maxWidth: 800 }} aria-label="simple table">
                 <TableBody>
                     {rows.map((row) => (
-                        <TableRow
-                            key={row.name}
-                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                        >
+                        <TableRow key={row.name} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell component="th" scope="row">
                                 {row.name}
                             </TableCell>
@@ -165,5 +195,3 @@ function BasicTable() {
         </TableContainer>
     );
 }
-
-

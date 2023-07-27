@@ -6,7 +6,7 @@ type Product = {
     id: number;
     photo: string;
     name: string;
-    price: string;
+    price: number;
 };
 
 const Products = () => {
@@ -20,7 +20,7 @@ const Products = () => {
     }, []);
 
     return (
-        <>
+        <div id='products'>
             <div className={styles.products}>
                 <h4>Exclusive Products</h4>
                 <h2>SPECIAL PRODUCTS</h2>
@@ -36,13 +36,13 @@ const Products = () => {
                                 <h6>{product.name}</h6>
                             </li>
                             <li>
-                                <h4>{product.price}</h4>
+                                <h4>${product.price}</h4>
                             </li>
                         </ul>
                     </Link>
                 ))}
             </div>
-        </>
+        </div>
     );
 };
 

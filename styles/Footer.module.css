@@ -152,3 +152,14 @@
         margin-left: 0;
     }
 }
+
+@media screen and (min-width:2000px) {
+    .flex {
+        justify-content: center;
+        padding-left: 6%;
+    }
+
+    .ul {
+        margin-right: 120px;
+    }
+}

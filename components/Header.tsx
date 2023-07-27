@@ -1,6 +1,5 @@
-import Head from 'next/head';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
-import React from 'react';
 import styles from '@/styles/Header.module.css';
 import Image from 'next/image';
 import logo from '@/components/img/img1.svg';
@@ -19,6 +18,7 @@ export default function Header() {
     const [anchorElFeatures, setAnchorElFeatures] = React.useState<null | HTMLElement>(null);
     const [anchorElPages, setAnchorElPages] = React.useState<null | HTMLElement>(null);
     const [anchorElBlog, setAnchorElBlog] = React.useState<null | HTMLElement>(null);
+    const [cartItemCount, setCartItemCount] = useState(0);
 
     const openHome = Boolean(anchorElHome);
     const openShop = Boolean(anchorElShop);
@@ -137,10 +137,21 @@ export default function Header() {
         setAnchorElBlog(null);
     };
 
+    const updateCartItemCount = () => {
+        const cartItems = JSON.parse(localStorage.getItem('cart') || '[]');
+        setCartItemCount(cartItems.length);
+    };
+
+    useEffect(() => {
+        updateCartItemCount();
+    }, []);
+
     return (
         <>
             < div className={styles.container}>
-                <Image className={styles.logo} src={logo} alt="logo" />
+                <Link href='/frontend'>
+                    <Image className={styles.logo} src={logo} alt="logo" />
+                </Link>
                 <div className={styles.btn}>
                     <Button
                         className={styles.btn}
@@ -379,8 +390,8 @@ export default function Header() {
                     </Menu>
                 </div>
                 <Search fontSize='large' className={styles.btn1} />
-                <Link href='/frontend/kart'>
-                    <Badge badgeContent={1} color="primary">
+                <Link href='/frontend/cart'>
+                    <Badge badgeContent={cartItemCount} color="primary">
                         <ShoppingBasketOutlined fontSize='large' className={styles.btn2} />
                     </Badge>
                 </Link>

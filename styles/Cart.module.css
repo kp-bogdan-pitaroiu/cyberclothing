@@ -1,0 +1,96 @@
+.section {
+    padding: 30px 0;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.section h2 {
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .08px;
+    color: #222;
+    margin-bottom: 0;
+}
+
+.section h3 {
+    display: flex;
+    flex-direction: row;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: .08px;
+    color: #555;
+    margin: 0;
+}
+
+.section p {
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: .08px;
+    color: #6c757d;
+    margin: 0;
+}
+
+.btndiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.increment {
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    color: #222;
+    margin-top: 7px;
+    padding-bottom: 3px;
+}
+
+.h3 {
+    font-family: Lato, sans-serif;
+    text-transform: uppercase;
+    color: #222;
+    font-size: 36px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.img {
+    width: 83px;
+    height: 110px;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    font-family: Lato, sans-serif;
+    color: #5098f8;
+    font-size: 18px;
+    padding-right: 15%;
+    padding-top: 10px;
+}
+
+.btns {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15% 20px 10%;
+}
+
+.ts {
+    font-family: Lato, sans-serif;
+    color: #333;
+    font-size: 20px;
+}
+
+.clearbtn:hover {
+    color: red;
+}
