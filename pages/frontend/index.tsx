@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import Homepage from '@/components/Homepage'
-import Products from '@/components/Products'
 import Footer from '@/components/Footer'
 
 
@@ -14,7 +13,6 @@ const index = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <Homepage />
-            <Products />
             <Footer />
         </>
     )

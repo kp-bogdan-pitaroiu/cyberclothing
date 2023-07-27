@@ -13,7 +13,7 @@ type Product = {
     id: number;
     photo: string;
     name: string;
-    price: string;
+    price: number;
     description: string;
 };
 
@@ -36,7 +36,9 @@ export default function Product() {
         const cartItems = JSON.parse(localStorage.getItem('cart') || '');
         const newItem = {
             id: product?.id,
+            image: product?.photo,
             name: product?.name,
+            price: product?.price,
             quantity: quantity,
         };
         cartItems.push(newItem);
@@ -71,7 +73,7 @@ export default function Product() {
                             <h2>{product?.name}</h2>
                         </li>
                         <li>
-                            <h4>{product?.price}</h4>
+                            <h4>${product?.price}</h4>
                         </li>
                         <li>
                             <h3>Select Size</h3>

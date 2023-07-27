@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import styles from '@/styles/Cart.module.css';
 import Link from 'next/link';
 import { Box, Button, Breadcrumbs, Tooltip, Typography, Table, TableHead, TableBody, TableCell, TableContainer, TableRow, Paper } from '@mui/material';
 import { Clear, Add, Remove } from '@mui/icons-material';
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/router';
+import Footer from './Footer';
+
+type CartItem = {
+    id: number;
+    image: string;
+    name: string;
+    price: number;
+    quantity: number;
+    action: string;
+};
 
 export default function Cart() {
-    const router = useRouter()
+    const router = useRouter();
 
     const calculateSubtotal = (price: number, quantity: number) => {
         return price * quantity;
@@ -20,19 +30,24 @@ export default function Cart() {
         return totalPrice;
     };
 
-    const [rows, setRows] = useState(initialRows);
+    const [rows, setRows] = useState<CartItem[]>(initialRows);
 
     const updateQuantity = (id: number, quantity: number) => {
-        const updatedRows = rows.map((row) =>
-            row.id === id ? { ...row, quantity: quantity } : row
-        );
+        const updatedRows = rows.map((row) => (row.id === id ? { ...row, quantity: quantity } : row));
         setRows(updatedRows);
+        localStorage.setItem('cart', JSON.stringify(updatedRows));
     };
 
     const deleteTask = (id: number) => {
         const updatedRows = rows.filter((row) => row.id !== id);
         setRows(updatedRows);
+        localStorage.setItem('cart', JSON.stringify(updatedRows));
     };
+
+    useEffect(() => {
+        const cartItems = JSON.parse(localStorage.getItem('cart') || '[]');
+        setRows(cartItems);
+    }, []);
 
     return (
         <>
@@ -46,42 +61,38 @@ export default function Cart() {
                     <Typography color="text.primary">Cart Page</Typography>
                 </Breadcrumbs>
             </div>
-            <BasicTable
-                rows={rows}
-                updateQuantity={updateQuantity}
-                deleteTask={deleteTask}
-                calculateSubtotal={calculateSubtotal}
-            />
+            <BasicTable rows={rows} updateQuantity={updateQuantity} deleteTask={deleteTask} calculateSubtotal={calculateSubtotal} />
             <div className={styles.total}>
                 <h3>Total Price: ${calculateTotalPrice()}</h3>
             </div>
             <div className={styles.btns}>
-
-                <Button size='large' variant='contained' onClick={() => {
-                    router.push('/frontend')
-                    setTimeout(() => {
-                        const distance = (document?.querySelector("#products") as HTMLElement)?.offsetTop;
-
-                        window.scrollTo({
-                            top: distance,
-                            behavior: "smooth",
-                        })
-                    }, 500);
-                }}>CONTINUE SHOPPING</Button>
-
-                <Button size='large' variant='contained'>CHECK OUT</Button>
+                <Button
+                    size="large"
+                    variant="contained"
+                    onClick={() => {
+                        router.push('/frontend');
+                        setTimeout(() => {
+                            const distance = (document?.querySelector('#products') as HTMLElement)?.offsetTop;
+                            window.scrollTo({
+                                top: distance,
+                                behavior: 'smooth',
+                            });
+                        }, 500);
+                    }}
+                >
+                    CONTINUE SHOPPING
+                </Button>
+                <Button size="large" variant="contained">
+                    CHECK OUT
+                </Button>
             </div>
+            <Footer />
         </>
     );
 }
 
-function createData(id: number, image: string, name: string, price: number, quantity: number, action: any) {
-    return { id, image, name, price, quantity, action };
-}
-
-const initialRows = [
-    createData(1, 'https://react.pixelstrap.com/assets/images/fashion/product/1.jpg', 'Flare Dress', 60, 1, 'X'),
-    createData(2, 'https://react.pixelstrap.com/assets/images/fashion/product/2.jpg', 'Womens Jeans', 165, 1, 'X')
+const initialRows: CartItem[] = [
+    { id: 1, image: '', name: ' ', price: 0, quantity: 0, action: '', }
 ];
 
 function BasicTable({ rows, updateQuantity, deleteTask, calculateSubtotal }: any) {
@@ -103,39 +114,37 @@ function BasicTable({ rows, updateQuantity, deleteTask, calculateSubtotal }: any
                     {rows.length === 0 ? (
                         <TableRow>
                             <TableCell colSpan={6} align="center">
-                                <h3 className={styles.h3}>No items in cart</h3>
-                                <Link href='/frontend'>
-                                    <Button variant='contained' size='large' onClick={() => {
-                                        router.push('/frontend')
+                                <h3 className={styles.h3}>Your Cart is Empty</h3>
+                                <Link href="/frontend">
+                                    <Button variant="contained" size="large" onClick={() => {
+                                        router.push('/frontend');
                                         setTimeout(() => {
-                                            const distance = (document?.querySelector("#products") as HTMLElement)?.offsetTop;
+                                            const distance = (document?.querySelector('#products') as HTMLElement)?.offsetTop;
                                             window.scrollTo({
                                                 top: distance,
-                                                behavior: "smooth",
-                                            })
+                                                behavior: 'smooth',
+                                            });
                                         }, 500);
-                                    }}>SHOP OUR PRODUCTS</Button>
+                                    }}>
+                                        SHOP OUR PRODUCTS
+                                    </Button>
                                 </Link>
                             </TableCell>
                         </TableRow>
                     ) : (
                         rows.map((row: any) => (
-                            <TableRow
-                                key={row.image}
-                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                            >
+                            <TableRow key={row.image} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                                 <TableCell align="center" component="th" scope="row">
                                     <img className={styles.img} src={row.image} alt={row.name} />
                                 </TableCell>
-                                <TableCell align="center" className={styles.ts}>{row.name}</TableCell>
-                                <TableCell align="center" className={styles.ts}>${row.price}</TableCell>
+                                <TableCell align="center" className={styles.ts}>
+                                    {row.name}
+                                </TableCell>
+                                <TableCell align="center" className={styles.ts}>
+                                    ${row.price}
+                                </TableCell>
                                 <TableCell align="center">
-                                    <Increment
-                                        quantity={row.quantity}
-                                        updateQuantity={(newQuantity: any) =>
-                                            updateQuantity(row.id, newQuantity)
-                                        }
-                                    />
+                                    <Increment quantity={row.quantity} updateQuantity={(newQuantity: any) => updateQuantity(row.id, newQuantity)} />
                                 </TableCell>
                                 <TableCell align="center">
                                     <Button style={{ backgroundColor: 'transparent' }} className={styles.clearbtn} onClick={() => deleteTask(row.id)}>
@@ -175,14 +184,14 @@ const Increment = ({ quantity, updateQuantity }: any) => {
     return (
         <>
             <div className={styles.btndiv}>
-                <Box component='span' sx={{ bgcolor: 'white', border: '1px solid #777', borderRadius: '2px' }}>
+                <Box component="span" sx={{ bgcolor: 'white', border: '1px solid #777', borderRadius: '2px' }}>
                     <div className={styles.btndiv}>
                         <Tooltip title="Delete Item">
                             <Button style={{ backgroundColor: 'transparent' }} onClick={DecNum}>
                                 <Remove />
                             </Button>
                         </Tooltip>
-                        <div className={styles.increment}>{count}</div>
+                        <div className={styles.increment}>{quantity}</div>
                         <Tooltip title="Add Item">
                             <Button style={{ backgroundColor: 'transparent' }} onClick={IncNum}>
                                 <Add />
@@ -193,4 +202,4 @@ const Increment = ({ quantity, updateQuantity }: any) => {
             </div>
         </>
     );
-};
+}
