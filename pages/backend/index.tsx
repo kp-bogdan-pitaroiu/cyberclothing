@@ -1,6 +1,6 @@
 import * as React from "react"
 import Dashboard from '@/components/Dashboard'
-import BasicTable from '@/components/tabel2'
+import BasicTable from '@/components/table'
 import styles from "@/styles/Backend.module.css"
 import SubcategoryPopup from "@/components/popupbutton"
 
@@ -17,7 +17,7 @@ export default function Backend() {
 <div className={styles.main}>
       
       <Dashboard />
-  <div className={styles.pages}>
+<div className={styles.pages}>
       <SubcategoryPopup variant="table"/>
     <div>
       <BasicTable />

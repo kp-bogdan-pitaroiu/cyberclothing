@@ -1,5 +1,6 @@
 import React from 'react';
 import './CerculeteColorate.css';
+import './products';
 
 const CerculeteColorate = () => {
   return (
