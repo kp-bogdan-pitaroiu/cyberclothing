@@ -1,4 +1,5 @@
 import { Paper, Button } from '@mui/material';
+import Link from 'next/link';
 import Carousel from 'react-material-ui-carousel'
 import styles from '@/styles/Header.module.css';
 
@@ -53,7 +54,9 @@ function Item(props: any) {
             <div className={styles.description}>
                 <h2>{props.item.name}</h2>
                 <h1>{props.item.description}</h1>
-                <Button variant='contained' size='large' className={styles.btnSN}>SHOP NOW</Button>
+                <Link href='#products'>
+                    <Button variant='contained' size='large' className={styles.btnSN}>SHOP NOW</Button>
+                </Link>
             </div>
 
         </Paper >

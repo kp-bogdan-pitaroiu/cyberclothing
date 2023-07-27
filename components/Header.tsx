@@ -1,11 +1,7 @@
-<<<<<<< Updated upstream
-import Head from 'next/head';
-=======
-import Link from 'next/link'
->>>>>>> Stashed changes
 import React from 'react';
 import styles from '@/styles/Header.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 import logo from '@/components/img/img1.svg';
 import { Button, Menu, MenuItem, MenuList } from '@mui/material';
 import { Search, ShoppingBasketOutlined, KeyboardArrowDown } from '@mui/icons-material'
@@ -143,7 +139,9 @@ export default function Header() {
     return (
         <>
             < div className={styles.container}>
-                <Image className={styles.logo} src={logo} alt="logo" />
+                <Link href='/frontend'>
+                    <Image className={styles.logo} src={logo} alt="logo" />
+                </Link>
                 <div className={styles.btn}>
                     <Button
                         className={styles.btn}

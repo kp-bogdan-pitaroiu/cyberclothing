@@ -20,7 +20,7 @@ const Products = () => {
     }, []);
 
     return (
-        <>
+        <div id='products'>
             <div className={styles.products}>
                 <h4>Exclusive Products</h4>
                 <h2>SPECIAL PRODUCTS</h2>
@@ -42,7 +42,7 @@ const Products = () => {
                     </Link>
                 ))}
             </div>
-        </>
+        </div>
     );
 };
 
