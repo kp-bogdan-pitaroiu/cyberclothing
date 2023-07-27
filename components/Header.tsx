@@ -1,13 +1,10 @@
-<<<<<<< Updated upstream
 import Head from 'next/head';
-=======
 import Link from 'next/link'
->>>>>>> Stashed changes
 import React from 'react';
 import styles from '@/styles/Header.module.css';
 import Image from 'next/image';
 import logo from '@/components/img/img1.svg';
-import { Button, Menu, MenuItem, MenuList } from '@mui/material';
+import { Button, Menu, MenuItem, MenuList, Badge } from '@mui/material';
 import { Search, ShoppingBasketOutlined, KeyboardArrowDown } from '@mui/icons-material'
 
 
@@ -382,7 +379,11 @@ export default function Header() {
                     </Menu>
                 </div>
                 <Search fontSize='large' className={styles.btn1} />
-                <ShoppingBasketOutlined fontSize='large' className={styles.btn2} />
+                <Link href='/frontend/kart'>
+                    <Badge badgeContent={1} color="primary">
+                        <ShoppingBasketOutlined fontSize='large' className={styles.btn2} />
+                    </Badge>
+                </Link>
             </div>
         </>)
 }
