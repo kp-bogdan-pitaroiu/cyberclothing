@@ -1,4 +1,9 @@
+import * as React from "react"
 import Dashboard from '@/components/Dashboard'
+import BasicTable from '@/components/table'
+import styles from "@/styles/Backend.module.css"
+import SubcategoryPopup from "@/components/popupbutton"
+
 
 //  Task 1: Create Produts Tabel Catalin
 //  https://react.pixelstrap.com/multikart-admin/products/physical/sub-category
@@ -7,8 +12,20 @@ import Dashboard from '@/components/Dashboard'
 
 export default function Backend() {
   return (
-    <>
+    
+    
+<div className={styles.main}>
+      
       <Dashboard />
-    </>
+<div className={styles.pages}>
+      <SubcategoryPopup variant="table"/>
+    <div>
+      <BasicTable />
+    </div>
+  </div>
+      
+</div>
   )
 }
+
+

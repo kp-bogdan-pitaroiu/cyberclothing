@@ -1,0 +1,178 @@
+.head {
+  padding-top: 18px;
+  padding-right: 18px;
+  padding-bottom: 18px;
+  padding-left: 18px;
+  background: #dcdced;
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgb(183, 183, 190);
+  line-height: normal;
+  position: relative;
+  border-right: 1px solid rgba(162, 159, 159, 0.484);
+  justify-content: center;
+  box-shadow: 0px 10px 10px #CCC;
+}
+.head h2 {
+  background-color: white;
+  letter-spacing: .05em;
+  position: relative;
+  padding: 5px;
+}
+
+.element {
+  flex: 245.562 0 auto;
+  flex-grow: 245.562;
+  flex-shrink: 0;
+  flex-basis: auto;
+  width: 245.562px;
+  max-width: 245.562px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: rgba(o, 0, 0, 0.05);
+  text-overflow: ellipsis;
+  justify-content: center;
+}
+
+.tableHeader {
+  box-align: center;
+  padding: 6px;
+  background-color: white !important;
+  border: 1px solid rgb(230, 228, 228);
+}
+
+.tableHeader b {
+  background-color: rgb(233, 230, 230) !important;
+  display: block;
+}
+
+.body {
+  border: 1px solid grey;
+  position: relative;
+}
+
+.status {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.fa-circle::before {
+  content: "";
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.table-list {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.element2 {
+  padding-top: 18px;
+  padding-right: 18px;
+  padding-bottom: 18px;
+  padding-left: 18px;
+  background: #dcdced;
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgb(183, 183, 190);
+  line-height: normal;
+  position: relative;
+  border-right: 1px solid rgba(210, 208, 208, 0.484);
+  justify-content: center;
+}
+.element2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  padding-top: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+  padding-left: 3px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.prevPage {
+  align-items: left;
+  position: relative;
+}
+
+.elementPage {
+  align-items: center;
+  position: relative;
+  white-space: nowrap;
+  margin-top: 3px;
+  margin-right: 10px;
+  margin-bottom: 3px;
+  margin-left: 10px;
+  width: 70px;
+}
+
+.previous {
+  align-items: left;
+  position: relative;
+}
+.next {
+  align-items: right;
+  position: relative;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+.thumb {
+  width: 30%;
+  max-width: 100%;
+}
+.pagination {
+  background-color: rgb(214, 214, 219);
+  align-items: center;
+}
+.tableList {
+  table-layout: fixed;
+}
+.tableL ist td:last-child {
+  width: 50px;
+}
+.status {
+  text-align: center;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.orange{
+  background-color: orange;
+}
+.green{
+  background-color: green;
+}
+.gray{
+  background-color: gray;
+}
+.cos {
+  color: red;
+}
+.creion {
+  color: green;
+}

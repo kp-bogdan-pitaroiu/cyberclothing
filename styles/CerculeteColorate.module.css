@@ -1,0 +1,26 @@
+.cerculete-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.cercul {
+  text-align: center;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.gray {
+  background-color: gray;
+}
+
+.green {
+  background-color: green;
+}

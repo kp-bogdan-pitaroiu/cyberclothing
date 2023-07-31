@@ -3,10 +3,8 @@ import Link from 'next/link'
 import styles from '@/styles/Header.module.css';
 import Image from 'next/image';
 import logo from '@/components/img/img1.svg';
-import { Button, Menu, MenuItem, MenuList, Badge } from '@mui/material';
-import { Search, ShoppingBasketOutlined, KeyboardArrowDown } from '@mui/icons-material'
-
-
+import { Button, Menu, MenuItem, MenuList, makeStyles, Badge } from '@mui/material';
+import { Search, ShoppingBasketOutlined, KeyboardArrowDown } from '@mui/icons-material';
 
 export default function Header() {
 
