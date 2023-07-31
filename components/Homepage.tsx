@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '@/styles/Header.module.css';
 import Header from '@/components/Header'
 import CarouselItem from '@/components/Carousel'
+import Products from './Products';
 
 
 export default function Homepage() {
@@ -26,8 +27,8 @@ export default function Homepage() {
                         </div>
                     </li>
                 </ul>
-
             </div>
+            <Products />
         </>
 
     );
