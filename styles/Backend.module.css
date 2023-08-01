@@ -1,11 +1,12 @@
 .main {
     display: flex;
+    flex-direction: row;
 }
+
 .pages {
- display: flex;
- flex-direction: column;
- justify-content: flex-end;
- align-items: end;
- background-color: white;
- padding: 5px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    color: black;
+    padding: 5px;
 }

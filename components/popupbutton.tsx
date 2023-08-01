@@ -15,12 +15,9 @@ const SubcategoryPopup = ({ variant }: { variant: string }) => {
 
   return (
     <div>
-      
-        <Button variant="contained" color="primary" onClick={handleClickOpen}>
-          ADD SUB CATEGORY
-        </Button>
-      
-
+      <Button variant="contained" color="primary" onClick={handleClickOpen}>
+        ADD SUB CATEGORY
+      </Button>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Add Physical Product</DialogTitle>
         <DialogContent>
@@ -36,11 +33,10 @@ const SubcategoryPopup = ({ variant }: { variant: string }) => {
           <TextField
             margin="dense"
             id="uploadImage"
-            label="Upload Image"
             type="file"
             fullWidth
           />
-         
+
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
