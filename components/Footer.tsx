@@ -42,8 +42,8 @@ const Footer = () => {
                     </ul>
                     <ul className={styles.lip}>
                         <li><h3>STORE INFORMATION</h3></li>
-                        <ListItem><FmdGood className={styles.clr1} /><p>Multikart Demo Store Romania</p></ListItem>
-                        <ListItem><Call className={styles.clr1} /><p>Call Us: 123-456-7898</p></ListItem>
+                        <ListItem><FmdGood className={styles.clr1} /><p>CyberClothing Demo Store Romania</p></ListItem>
+                        <ListItem><Call className={styles.clr1} /><p>Call Us: 0712-345-678</p></ListItem>
                         <ListItem><Email className={styles.clr1} /><p>Email Us: support@cyberclothing.com</p></ListItem>
                         <ListItem><Fax className={styles.clr1} /><p>Fax : 123456</p></ListItem>
                     </ul>

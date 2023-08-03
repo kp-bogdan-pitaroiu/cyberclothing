@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "name": "Victor",
+    "email": "cristian.dascalu@gmail.com",
+    "phoneNumber": "0712345678",
+    "address": "Baladei 8",
+    "price": 528,
+    "status": "In progress",
+    "products": [
+      {
+        "id": 3,
+        "name": "White Shirt",
+        "photo": "https://react.pixelstrap.com/assets/images/fashion/product/3.jpg",
+        "quantity": 1
+      },
+      {
+        "id": 4,
+        "name": "Relaxed Dress",
+        "photo": "https://react.pixelstrap.com/assets/images/fashion/product/4.jpg",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "David",
+    "email": "cristian.dascalu@gmail.com",
+    "phoneNumber": "0712345678",
+    "address": "Pridvorului 5",
+    "price": 205,
+    "status": "In progress",
+    "products": [
+      {
+        "id": 7,
+        "name": "Short Dress",
+        "photo": "https://react.pixelstrap.com/assets/images/fashion/product/21.jpg",
+        "quantity": 1
+      },
+      {
+        "id": 8,
+        "name": "Shortsleeve Shirt",
+        "photo": "https://react.pixelstrap.com/assets/images/fashion/product/8.jpg",
+        "quantity": 1
+      }
+    ]
+  }
+]

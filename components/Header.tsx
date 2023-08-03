@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styles from '@/styles/Header.module.css';
 import Image from 'next/image';
 import logo from '@/components/img/img1.svg';
-import { Button, Menu, MenuItem, MenuList, makeStyles, Badge } from '@mui/material';
+import { Button, Menu, MenuItem, MenuList, Badge } from '@mui/material';
 import { Search, ShoppingBasketOutlined, KeyboardArrowDown } from '@mui/icons-material';
 
 export default function Header() {
@@ -142,6 +142,10 @@ export default function Header() {
 
     useEffect(() => {
         updateCartItemCount();
+        window.addEventListener('storage', updateCartItemCount);
+        return () => {
+            window.removeEventListener('storage', updateCartItemCount);
+        };
     }, []);
 
     return (
@@ -176,9 +180,9 @@ export default function Header() {
                         }}
                     >
                         <MenuList>
-                            {
-                                homeMenuList.map(link => (<MenuItem className={styles.menuitem}>{link}</MenuItem>))
-                            }
+                            {homeMenuList.map((link, index) => (
+                                <MenuItem key={index} className={styles.menuitem}>{link}</MenuItem>
+                            ))}
                         </MenuList>
                     </Menu>
                     <Button
