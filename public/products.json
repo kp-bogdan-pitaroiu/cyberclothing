@@ -1,4 +1,204 @@
 {
+  "0": {
+    "id": 1,
+    "name": "Flare Dress",
+    "price": "60",
+    "status": "green",
+    "category": "Dress",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/1.jpg",
+    "vendorId": "1"
+  },
+  "1": {
+    "id": 2,
+    "name": "Womens Jeans",
+    "price": "165",
+    "status": "orange",
+    "category": "Jeans",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/2.jpg",
+    "vendorId": "1"
+  },
+  "2": {
+    "id": 3,
+    "name": "White Shirt",
+    "price": "278",
+    "status": "gray",
+    "category": "Shirt",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/3.jpg",
+    "vendorId": "1"
+  },
+  "3": {
+    "id": 4,
+    "name": "Relaxed Dress",
+    "price": "250",
+    "status": "orange",
+    "category": "Dress",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/4.jpg",
+    "vendorId": "1"
+  },
+  "4": {
+    "id": 5,
+    "name": "Skirt",
+    "price": 999,
+    "status": "orange",
+    "category": "Skirt",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/5.jpg",
+    "vendorId": "1"
+  },
+  "5": {
+    "id": 6,
+    "name": "Skirt",
+    "price": 999,
+    "status": "orange",
+    "category": "Skirt",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/6.jpg",
+    "vendorId": "1"
+  },
+  "6": {
+    "id": 7,
+    "name": "Short Dress",
+    "price": "130",
+    "status": "green",
+    "category": "Dress",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/21.jpg",
+    "vendorId": "1"
+  },
+  "7": {
+    "id": 8,
+    "name": "Shortsleeve Shirt",
+    "price": "75",
+    "status": "orange",
+    "category": "Shirt",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/8.jpg",
+    "vendorId": "2"
+  },
+  "8": {
+    "id": 9,
+    "name": "Cut Tshirt",
+    "price": "125",
+    "status": "green",
+    "category": "Tshirt",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/43.jpg",
+    "vendorId": "2"
+  },
+  "9": {
+    "id": 10,
+    "name": "Shortsleeve Tshirt",
+    "price": "80",
+    "status": "green",
+    "category": "Tshirt",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/10.jpg",
+    "vendorId": "2"
+  },
+  "10": {
+    "id": 11,
+    "name": "Maxi Dress",
+    "price": "70",
+    "status": "gray",
+    "category": "Dress",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/11.jpg",
+    "vendorId": "3"
+  },
+  "11": {
+    "id": 12,
+    "name": "Navy Dress",
+    "price": "190",
+    "status": "orange",
+    "category": "Dress",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/12.jpg",
+    "vendorId": "3"
+  },
+  "12": {
+    "id": 13,
+    "name": "Red Top",
+    "price": "50",
+    "status": "green",
+    "category": "Top",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/13.jpg",
+    "vendorId": "4"
+  },
+  "13": {
+    "id": 14,
+    "name": "Mens Jeans",
+    "price": "220",
+    "status": "gray",
+    "category": "Jeans",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/32.jpg",
+    "vendorId": "4"
+  },
+  "14": {
+    "id": 15,
+    "name": "Leather Jacket",
+    "price": "450",
+    "status": "gray",
+    "category": "Jacket",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/45.jpg",
+    "vendorId": "4"
+  },
+  "15": {
+    "id": 16,
+    "name": "Multicolor Jumper",
+    "price": "185",
+    "status": "green",
+    "category": "Jumper",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/16.jpg",
+    "vendorId": "4"
+  },
+  "16": {
+    "id": 17,
+    "name": "Trim Dress",
+    "price": "210",
+    "status": "orange",
+    "category": "Dress",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/17.jpg",
+    "vendorId": "5"
+  },
+  "17": {
+    "id": 18,
+    "name": "Dotted Dress",
+    "price": "200",
+    "status": "green",
+    "category": "Dress",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/18.jpg",
+    "vendorId": "5"
+  },
+  "18": {
+    "id": 19,
+    "name": "Black Top",
+    "price": "65",
+    "status": "orange",
+    "category": "Top",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/19.jpg",
+    "vendorId": "5"
+  },
+  "19": {
+    "id": 20,
+    "name": "Summer Dress",
+    "price": "300",
+    "status": "gray",
+    "category": "Dress",
+    "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
+    "photo": "https://react.pixelstrap.com/assets/images/fashion/product/20.jpg",
+    "vendorId": "5"
+  },
   "products": [
     {
       "id": 1,

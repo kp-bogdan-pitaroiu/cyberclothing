@@ -22,7 +22,10 @@ const Dialogmodal: React.FC<DialogmodalProps> = ({isOpen, product, closeHandler,
     }
     const saveProduct = () => {
         if (product) {
+          console.log('inta?',name)
             let updatedProduct: productInt= {...product, name: name, price: price, status: status, category: category}
+          console.log('updatedProduct?',updatedProduct)
+
             handleEditProduct && product && handleEditProduct(updatedProduct);
             closeHandler && closeHandler();
         }
@@ -46,24 +49,23 @@ const Dialogmodal: React.FC<DialogmodalProps> = ({isOpen, product, closeHandler,
           />
           {/* Upload Image */}
           <TextField
-        
+          
             margin="dense"
             id="uploadImage"
             label="Upload Image"
             type="file"
             fullWidth
           />
-
+          
           {/* Camp aditional cad este apelata "pencil" */}
           {product && (
             <>
-              <TextField
-            
+              {/* <TextField
                 margin="dense"
                 id="image"
                 label="Image"
                 fullWidth
-              />
+              /> */}
               <TextField
               defaultValue={product?.name}
                 margin="dense"

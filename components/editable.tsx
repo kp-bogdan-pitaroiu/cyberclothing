@@ -36,7 +36,7 @@ const SubcategoryPopup = ({ variant }: { variant: string }) => {
         <DialogTitle id="form-dialog-title">Add Physical Product</DialogTitle>
         <DialogContent>
           {/* Subcategory Name */}
-          <TextField
+          <TextField               // aici trebuie sa modific
             autoFocus
             margin="dense"
             id="subcategoryName"
@@ -51,6 +51,7 @@ const SubcategoryPopup = ({ variant }: { variant: string }) => {
             type="file"
             fullWidth
           />
+          
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
@@ -67,13 +68,13 @@ const SubcategoryPopup = ({ variant }: { variant: string }) => {
         <DialogTitle id="second-dialog-title">Add Product Details</DialogTitle>
         <DialogContent>
           {/* Image */}
-          <TextField
+       {/*    <TextField
             autoFocus
             margin="dense"
             id="image"
             label="Image"
             fullWidth
-          />
+          /> */}
           {/* Product Name */}
           <TextField
             margin="dense"

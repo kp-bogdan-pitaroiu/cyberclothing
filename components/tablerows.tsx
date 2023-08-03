@@ -97,5 +97,77 @@ export interface TableRowData {
         price: 237,
         status: "green",
         category: "Electronics"
+    },
+    {
+        image: "/img/rochie-roz.jpeg",
+        key: 12,
+        productName: "Motor Vehicle Tyres",
+        price: 237,
+        status: "green",
+        category: "Electronics"
+    },
+    {
+        image: "/img/rochie-roz.jpeg",
+        key: 13,
+        productName: "Motor Vehicle Tyres",
+        price: 237,
+        status: "green",
+        category: "Electronics"
+    },
+    {
+        image: "/img/rochie-roz.jpeg",
+        key: 14,
+        productName: "Motor Vehicle Tyres",
+        price: 237,
+        status: "green",
+        category: "Electronics"
+    },
+    {
+        image: "/img/rochie-roz.jpeg",
+        key: 15,
+        productName: "Motor Vehicle Tyres",
+        price: 237,
+        status: "green",
+        category: "Electronics"
+    },
+    {
+        image: "/img/rochie-roz.jpeg",
+        key: 16,
+        productName: "Motor Vehicle Tyres",
+        price: 237,
+        status: "green",
+        category: "Electronics"
+    },
+    {
+        image: "/img/rochie-roz.jpeg",
+        key: 17,
+        productName: "Motor Vehicle Tyres",
+        price: 237,
+        status: "green",
+        category: "Electronics"
+    },
+    {
+        image: "/img/rochie-roz.jpeg",
+        key: 18,
+        productName: "Motor Vehicle Tyres",
+        price: 237,
+        status: "green",
+        category: "Electronics"
+    },
+    {
+        image: "/img/rochie-roz.jpeg",
+        key: 19,
+        productName: "Motor Vehicle Tyres",
+        price: 237,
+        status: "green",
+        category: "Electronics"
+    },
+    {
+        image: "/img/rochie-roz.jpeg",
+        key: 20,
+        productName: "Motor Vehicle Tyres",
+        price: 237,
+        status: "green",
+        category: "Electronics"
     }
 ];

@@ -4,6 +4,40 @@ import EditIcon from '@mui/icons-material/Edit';
 
 const SubcategoryPopup = ({ variant }: { variant: string }) => {
   const [open, setOpen] = React.useState(false);
+  const [formData, setFormData] = React.useState({name: "", price: "", status: "", category: ""});
+  
+  const addProduct = () => {
+
+    const productsData = {
+        name: formData.name,
+        price: formData.price,
+        status: formData.status,
+        category: formData.category,
+        products: products.map((item) => ({
+            id: item.id,
+            name: item.name,
+            photo: item.image,
+            quantity: item.quantity,
+        })),
+    };
+
+    fetch("/api/products", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(productsData),
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log("Product added:", data);
+            setOpen(false);
+        })
+        .catch((error) => {
+            console.error("Error placing order:", error);
+        });
+};
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -12,7 +46,29 @@ const SubcategoryPopup = ({ variant }: { variant: string }) => {
     setOpen(false);
   };
 
+  
+  const handleSave = async () => {
+    try {
+      const response = await fetch("api/products/json", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
+      if (response.ok) {
+        console.log("Obiectul a fost adăugat cu succes în fișierul JSON.");
+      } else {
+        console.error("A apărut o eroare în timpul adăugării obiectului.");
+      }
+    } catch (error) {
+      console.error("A apărut o eroare:", error);
+    }
+
+    handleClose();
+  };
+  
   return (
     <div>
       
@@ -40,19 +96,38 @@ const SubcategoryPopup = ({ variant }: { variant: string }) => {
             type="file"
             fullWidth
           />
-         
+          <TextField
+            margin="dense"
+            id="Name"
+            label="Name"
+            fullWidth
+          />
+          <TextField
+            margin="dense"
+            id="price"
+            label="Price"
+            fullWidth
+          />
+          <TextField
+            margin="dense"
+            id="status"
+            label="Status"
+            fullWidth
+          />
+          <TextField
+            margin="dense"
+            id="category"
+            label="Category"
+            fullWidth
+          />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={addProduct} color="primary">
             Save
           </Button>
           <Button onClick={handleClose} color="primary">
             Close
-          </Button>
-          {/* {variant === "pencil" && showAdditionalFields && (
-            <Button onClick={handleHideAdditionalFields} color="primary">
-            </Button>
-          )} */}
+          </Button>         
         </DialogActions>
       </Dialog>
     </div>

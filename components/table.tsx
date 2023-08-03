@@ -15,11 +15,10 @@ import CreateOutlinedIcon from "@mui/icons-material/CreateOutlined";
 import cerculete from "@/styles/CerculeteColorate.module.css";
 import { DataObject } from "@mui/icons-material";
 import { useEffect } from "react";
-import TableSortLabel from '@mui/material/TableSortLabel';
+import TableSortLabel from "@mui/material/TableSortLabel";
 import Dialogmodal from "./Dialogmodal";
-import EditIcon from '@mui/icons-material/Edit';
+import EditIcon from "@mui/icons-material/Edit";
 import { productInt } from "./Interface";
-
 
 const BasicTable = () => {
   const [page, setPage] = React.useState(0);
@@ -36,17 +35,28 @@ const BasicTable = () => {
     setSelectedIndex(key);
   };
 
-  const handleClose = () => {setModalOpen(false)};
+  const handleClose = () => {
+    setModalOpen(false);
+  };
   const handleEditProduct = (product: productInt) => {
+    
     let updatedData = data;
-    if (selectedIndex){ 
+    if (selectedIndex != -1) {
       updatedData[selectedIndex] = product;
-    } 
-    // trebuie sa modific json-ul (to update json)
-    setData(updatedData);
-  }
-  
+    }
 
+    fetch("http://localhost:3000/api/products",{
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify(updatedData),
+    })
+      .catch((error) => console.error("Error fetching products:", error));
+    setData(updatedData);
+  };
   const handleChangePage = (event: any, newPage: number) => {
     setPage(newPage);
   };
@@ -71,7 +81,12 @@ const BasicTable = () => {
 
   return (
     <TableContainer component={Paper}>
-      <Dialogmodal isOpen={modalOpen} product={selectedRow} closeHandler={handleClose} handleEditProduct={handleEditProduct}/>
+      <Dialogmodal
+        isOpen={modalOpen}
+        product={selectedRow}
+        closeHandler={handleClose}
+        handleEditProduct={handleEditProduct}
+      />
       <Table
         className={styles.tableList}
         sx={{ minWidth: 650 }}
@@ -153,7 +168,6 @@ const BasicTable = () => {
         onRowsPerPageChange={handleChangeRowsPerPage}
       />
     </TableContainer>
-   
   );
 };
 
