@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     background-color: white;
+    padding-top: 20px;
 }
 
 .products h4 {
@@ -97,5 +98,12 @@
     .ul {
         padding-left: 2.2%;
         padding-right: 2.2%;
+    }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1660px) {
+    .ul {
+        padding-left: 13%;
+        padding-right: 13%;
     }
 }

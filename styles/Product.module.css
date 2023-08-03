@@ -248,6 +248,7 @@
 
 .btndiv {
     display: flex;
+    padding-bottom: 5px;
 }
 
 .btnAC {
