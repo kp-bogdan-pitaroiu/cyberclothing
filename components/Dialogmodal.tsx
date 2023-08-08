@@ -5,29 +5,29 @@ import { productInt } from "./Interface";
 
 
 type DialogmodalProps = {
-    isOpen: boolean;
-    product?: productInt | null;
-    closeHandler?: ()=> void;
-    handleEditProduct?: (product: productInt)=>void;
+  isOpen: boolean;
+  product?: productInt | null;
+  closeHandler?: () => void;
+  handleEditProduct?: (product: productInt) => void;
 }
 
-const Dialogmodal: React.FC<DialogmodalProps> = ({isOpen, product, closeHandler, handleEditProduct}) => {
-    const [name, setName] = React.useState(product?.name ? product?.name : "");
-    const [price, setPrice] = React.useState(product?.price ? product?.price : 0);
-    const [status, setStatus] = React.useState(product?.status ? product?.status : "");
-    const [category, setCategory] = React.useState(product?.category ? product?.category : "");
+const Dialogmodal: React.FC<DialogmodalProps> = ({ isOpen, product, closeHandler, handleEditProduct }) => {
+  const [name, setName] = React.useState(product?.name ? product?.name : "");
+  const [price, setPrice] = React.useState(product?.price ? product?.price : 0);
+  const [status, setStatus] = React.useState(product?.status ? product?.status : "");
+  const [category, setCategory] = React.useState(product?.category ? product?.category : "");
 
-    const closeModal = () => {
-        closeHandler && closeHandler()
+  const closeModal = () => {
+    closeHandler && closeHandler()
+  }
+  const saveProduct = () => {
+    if (product) {
+      let updatedProduct: productInt = { ...product, name: name, price: price, status: status, category: category }
+      handleEditProduct && product && handleEditProduct(updatedProduct);
+      closeHandler && closeHandler();
     }
-    const saveProduct = () => {
-        if (product) {
-            let updatedProduct: productInt= {...product, name: name, price: price, status: status, category: category}
-            handleEditProduct && product && handleEditProduct(updatedProduct);
-            closeHandler && closeHandler();
-        }
-        
-    }
+
+  }
 
 
   return (
@@ -37,7 +37,7 @@ const Dialogmodal: React.FC<DialogmodalProps> = ({isOpen, product, closeHandler,
         <DialogContent>
           {/* Subcategory Name */}
           <TextField
-          defaultValue={product?.category}
+            defaultValue={product?.category}
             autoFocus
             margin="dense"
             id="subcategoryName"
@@ -46,10 +46,10 @@ const Dialogmodal: React.FC<DialogmodalProps> = ({isOpen, product, closeHandler,
           />
           {/* Upload Image */}
           <TextField
-        
+
             margin="dense"
             id="uploadImage"
-            label="Upload Image"
+            label=""
             type="file"
             fullWidth
           />
@@ -58,51 +58,44 @@ const Dialogmodal: React.FC<DialogmodalProps> = ({isOpen, product, closeHandler,
           {product && (
             <>
               <TextField
-            
-                margin="dense"
-                id="image"
-                label="Image"
-                fullWidth
-              />
-              <TextField
-              defaultValue={product?.name}
+                defaultValue={product?.name}
                 margin="dense"
                 id="Name"
                 label="Name"
                 fullWidth
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                    setName(event.target.value);
-                  }}
+                  setName(event.target.value);
+                }}
               />
               <TextField
-              defaultValue={product?.price}
+                defaultValue={product?.price}
                 margin="dense"
                 id="price"
                 label="Price"
                 fullWidth
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                    setPrice(parseInt(event.target.value));
-                  }}
+                  setPrice(parseInt(event.target.value));
+                }}
               />
               <TextField
-              defaultValue={product?.status}
+                defaultValue={product?.status}
                 margin="dense"
                 id="status"
                 label="Status"
                 fullWidth
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                    setStatus(event.target.value);
-                  }}
+                  setStatus(event.target.value);
+                }}
               />
               <TextField
-              defaultValue={product?.category}
+                defaultValue={product?.category}
                 margin="dense"
                 id="category"
                 label="Category"
                 fullWidth
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                    setCategory(event.target.value);
-                  }}
+                  setCategory(event.target.value);
+                }}
               />
             </>
           )}

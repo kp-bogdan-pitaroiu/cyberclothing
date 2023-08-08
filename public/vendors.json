@@ -1,32 +1,56 @@
 [
-    {
-        "id": 1,
-        "email": "andrei.manolea@gmail.com",
-        "password": "123Andrei1234"
-    },
-    {
-        "id": 2,
-        "email": "cosmin.manolea@gmail.com",
-        "password": "123Cosmin1234"
-    },
-    {
-        "id": 3,
-        "email": "bogdan.pitaroiu@gmail.com",
-        "password": "123Bogdan1234"
-    },
-    {
-        "id": 4,
-        "email": "cristian.dascalu@gmail.com",
-        "password": "123Cristi1234"
-    },
-    {
-        "id": 5,
-        "email": "tudor.zamfir@gmail.com",
-        "password": "123Tudor1234"
-    },
-    {
-        "id": 6,
-        "email": "cafea.tucano@gmail.com",
-        "password": "123Cafea1234"
-    }
+  {
+    "id": 1,
+    "name": "Andrei",
+    "email": "andrei.manolea@gmail.com",
+    "password": "123Andrei1234"
+  },
+  {
+    "id": 2,
+    "name": "Cosmin",
+    "email": "cosmin.manolea@gmail.com",
+    "password": "123Cosmin1234"
+  },
+  {
+    "id": 3,
+    "name": "Bogdan",
+    "email": "bogdan.pitaroiu@gmail.com",
+    "password": "123Bogdan1234"
+  },
+  {
+    "id": 4,
+    "name": "Cristi",
+    "email": "cristian.dascalu@gmail.com",
+    "password": "123Cristi1234"
+  },
+  {
+    "id": 5,
+    "name": "Tudor",
+    "email": "tudor.zamfir@gmail.com",
+    "password": "123Tudor1234"
+  },
+  {
+    "id": 6,
+    "name": "Razvan",
+    "email": "razvan.vasile@gmail.com",
+    "password": "123Razvan1234"
+  },
+  {
+    "id": 7,
+    "name": "David",
+    "email": "david.dinu@gmail.com",
+    "password": "123David1234"
+  },
+  {
+    "id": 8,
+    "name": "Tom",
+    "email": "tom.sachs@gmail.com",
+    "password": "123Tom1234"
+  },
+  {
+    "id": 9,
+    "name": "Dan",
+    "email": "dan.dobre@gmail.com",
+    "password": "123Dan1234"
+  }
 ]

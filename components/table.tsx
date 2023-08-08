@@ -115,11 +115,11 @@ const BasicTable = () => {
                     key={row.id}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                   >
-                    <TableCell component="th" scope="row">
+                    <TableCell align="center" component="th" scope="row">
                       <img src={row.photo} className={styles.thumb} />
                     </TableCell>
                     <TableCell align="center">{row.name}</TableCell>
-                    <TableCell align="center">{row.price}</TableCell>
+                    <TableCell align="center">${row.price}</TableCell>
                     <TableCell align="center">
                       <span
                         className={`${cerculete.cercul} ${cerculete[row.status]}`}

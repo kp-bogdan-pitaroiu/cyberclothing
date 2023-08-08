@@ -8,7 +8,7 @@
       "category": "Dress",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/1.jpg",
-      "vendorId": "1"
+      "vendorId": 1
     },
     {
       "id": 2,
@@ -18,7 +18,7 @@
       "category": "Jeans",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/2.jpg",
-      "vendorId": "1"
+      "vendorId": 1
     },
     {
       "id": 3,
@@ -28,7 +28,7 @@
       "category": "Shirt",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/3.jpg",
-      "vendorId": "1"
+      "vendorId": 1
     },
     {
       "id": 4,
@@ -38,7 +38,7 @@
       "category": "Dress",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/4.jpg",
-      "vendorId": "1"
+      "vendorId": 1
     },
     {
       "id": 5,
@@ -48,7 +48,7 @@
       "category": "Shirt",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/5.jpg",
-      "vendorId": "1"
+      "vendorId": 1
     },
     {
       "id": 6,
@@ -58,7 +58,7 @@
       "category": "Shirt",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/6.jpg",
-      "vendorId": "1"
+      "vendorId": 1
     },
     {
       "id": 7,
@@ -68,7 +68,7 @@
       "category": "Dress",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/21.jpg",
-      "vendorId": "1"
+      "vendorId": 1
     },
     {
       "id": 8,
@@ -78,7 +78,7 @@
       "category": "Shirt",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/8.jpg",
-      "vendorId": "2"
+      "vendorId": 2
     },
     {
       "id": 9,
@@ -88,7 +88,7 @@
       "category": "Tshirt",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/43.jpg",
-      "vendorId": "2"
+      "vendorId": 2
     },
     {
       "id": 10,
@@ -98,7 +98,7 @@
       "category": "Tshirt",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/10.jpg",
-      "vendorId": "2"
+      "vendorId": 2
     },
     {
       "id": 11,
@@ -108,7 +108,7 @@
       "category": "Dress",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/11.jpg",
-      "vendorId": "3"
+      "vendorId": 3
     },
     {
       "id": 12,
@@ -118,7 +118,7 @@
       "category": "Dress",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/12.jpg",
-      "vendorId": "3"
+      "vendorId": 3
     },
     {
       "id": 13,
@@ -128,7 +128,7 @@
       "category": "Top",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/13.jpg",
-      "vendorId": "4"
+      "vendorId": 4
     },
     {
       "id": 14,
@@ -138,7 +138,7 @@
       "category": "Jeans",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/32.jpg",
-      "vendorId": "4"
+      "vendorId": 4
     },
     {
       "id": 15,
@@ -148,7 +148,7 @@
       "category": "Jacket",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/45.jpg",
-      "vendorId": "4"
+      "vendorId": 4
     },
     {
       "id": 16,
@@ -158,7 +158,7 @@
       "category": "Jumper",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/16.jpg",
-      "vendorId": "4"
+      "vendorId": 4
     },
     {
       "id": 17,
@@ -168,7 +168,7 @@
       "category": "Dress",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/17.jpg",
-      "vendorId": "5"
+      "vendorId": 5
     },
     {
       "id": 18,
@@ -178,7 +178,7 @@
       "category": "Dress",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/18.jpg",
-      "vendorId": "5"
+      "vendorId": 5
     },
     {
       "id": 19,
@@ -188,7 +188,7 @@
       "category": "Top",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/19.jpg",
-      "vendorId": "5"
+      "vendorId": 5
     },
     {
       "id": 20,
@@ -198,7 +198,7 @@
       "category": "Dress",
       "description": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem",
       "photo": "https://react.pixelstrap.com/assets/images/fashion/product/20.jpg",
-      "vendorId": "5"
+      "vendorId": 5
     }
   ]
 }
