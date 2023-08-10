@@ -1,0 +1,175 @@
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.section {
+    padding: 30px 40px;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.section h2 {
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .08px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.section h3 {
+    display: flex;
+    flex-direction: row;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: .08px;
+    color: #555;
+    margin: 0;
+}
+
+.head {
+    padding-top: 18px;
+    padding-right: 18px;
+    padding-bottom: 18px;
+    padding-left: 18px;
+    background: #dcdced;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(183, 183, 190);
+    line-height: normal;
+    position: relative;
+    border-right: 1px solid rgba(162, 159, 159, 0.484);
+    justify-content: center;
+    box-shadow: 0px 10px 10px #CCC;
+}
+
+.element {
+    flex: 245.562 0 auto;
+    flex-grow: 245.562;
+    flex-shrink: 0;
+    flex-basis: auto;
+    width: 245.562px;
+    max-width: 245.562px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: rgba(o, 0, 0, 0.05);
+    text-overflow: ellipsis;
+    justify-content: center;
+}
+
+.tableHeader {
+    box-align: center;
+    padding: 6px;
+    background-color: white !important;
+    border: 1px solid rgb(230, 228, 228);
+}
+
+.tableHeader1 {
+    box-align: center;
+    padding: 6px;
+    background-color: white !important;
+    border: 1px solid rgb(230, 228, 228);
+    width: 100px;
+}
+
+.tableHeader1 b {
+    background-color: rgb(233, 230, 230) !important;
+    display: block;
+}
+
+.tableHeaderS {
+    box-align: center;
+    padding: 6px;
+    background-color: white !important;
+    border: 1px solid rgb(230, 228, 228);
+    width: 0;
+}
+
+.tableHeaderS b {
+    background-color: rgb(233, 230, 230) !important;
+    display: block;
+}
+
+
+.tableHeader b {
+    background-color: rgb(233, 230, 230) !important;
+    display: block;
+}
+
+.body {
+    position: relative;
+}
+
+.pagination {
+    background-color: #f8f8f8;
+    align-items: center;
+}
+
+.title {
+    text-transform: uppercase;
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .08px;
+    color: #222;
+}
+
+.tableList {
+    table-layout: fixed;
+}
+
+.image {
+    width: 30%;
+    max-width: 100%;
+}
+
+.delete:hover {
+    color: red;
+    background-color: transparent !important;
+}
+
+.edit:hover {
+    color: green;
+    background-color: transparent !important;
+}
+
+.select::before {
+    border-bottom: none !important;
+}
+
+.select::after {
+    border-bottom: none !important;
+}
+
+.inprogress,
+.lowquantity {
+    color: orange;
+}
+
+.delivered,
+.instock {
+    color: green;
+}
+
+.canceled,
+.deleted {
+    color: red;
+}
+
+.notavailable {
+    color: gray,
+}

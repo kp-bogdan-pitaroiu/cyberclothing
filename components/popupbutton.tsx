@@ -16,7 +16,7 @@ const SubcategoryPopup = ({ variant }: { variant: string }) => {
   return (
     <div>
       <Button variant="contained" color="primary" onClick={handleClickOpen}>
-        ADD SUB CATEGORY
+        ADD PRODUCT
       </Button>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Add Physical Product</DialogTitle>

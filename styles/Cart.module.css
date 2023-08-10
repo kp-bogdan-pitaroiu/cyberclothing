@@ -94,3 +94,60 @@
 .clearbtn:hover {
     color: red;
 }
+
+.tyPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    font-family: Lato, sans-serif;
+    background-color: white;
+}
+
+.tyPage h1 {
+    color: #222;
+    font-size: 36px;
+    padding-bottom: 10px;
+}
+
+.tyPage h2 {
+    color: #333;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.tyPage h3 {
+    color: #555;
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+
+.shipping {
+    display: flex;
+    align-items: center;
+    font-family: Lato, sans-serif;
+    padding-bottom: 40px;
+}
+
+.shipping p {
+    color: #222;
+    font-size: 24px;
+}
+
+.shipping img {
+    height: 60px;
+    width: 120px;
+    padding-right: 10px;
+}
+
+.links {
+    display: flex;
+    padding: 10px;
+    list-style: none;
+}
+
+.clr {
+    color: #5098f8;
+    margin-right: 40px;
+}

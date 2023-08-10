@@ -1,0 +1,20 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.main h3 {
+    font-family: Lato, sans-serif;
+    color: #222;
+    font-size: 18px;
+    padding-bottom: 7px;
+    padding-top: 10px;
+    text-align: start;
+}

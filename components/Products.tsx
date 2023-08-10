@@ -7,6 +7,7 @@ type Product = {
     photo: string;
     name: string;
     price: number;
+    status: string;
 };
 
 const Products = () => {
@@ -27,19 +28,22 @@ const Products = () => {
             </div>
             <div className={styles.ul}>
                 {products.map((product) => (
-                    <Link href={`/frontend/products/${product.id}`} key={product.id}>
-                        <ul className={styles.li}>
-                            <li>
-                                <img src={product.photo} alt={product.name} />
-                            </li>
-                            <li>
-                                <h6>{product.name}</h6>
-                            </li>
-                            <li>
-                                <h4>${product.price}</h4>
-                            </li>
-                        </ul>
-                    </Link>
+
+                    product.status !== 'deleted' && (
+                        <Link href={`/frontend/products/${product.id}`} key={product.id}>
+                            <ul className={styles.li}>
+                                <li>
+                                    <img src={product.photo} alt={product.name} />
+                                </li>
+                                <li>
+                                    <h6>{product.name}</h6>
+                                </li>
+                                <li>
+                                    <h4>${product.price}</h4>
+                                </li>
+                            </ul>
+                        </Link>
+                    )
                 ))}
             </div>
         </div>

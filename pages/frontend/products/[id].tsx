@@ -33,7 +33,7 @@ export default function Product() {
     }, [router.query.id]);
 
     const addToCart = () => {
-        const cartItems = JSON.parse(localStorage.getItem('cart') || '');
+        const cartItems = JSON.parse(localStorage.getItem('cart') || '[]');
         const newItem = {
             id: product?.id,
             image: product?.photo,

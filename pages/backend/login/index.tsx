@@ -99,10 +99,17 @@ function LoginPage(): JSX.Element {
               Log in
             </Button>
           </form>
-          <Typography variant="body2" color="text.secondary" align="center" sx={{ mt: 8, mb: 4 }}>
+          <Typography variant="body2" color="text.secondary" align="center" sx={{ mt: 8, fontSize: 20 }}>
+            {"If you don't have an account "}
+            <Link color="inherit" href="/backend/signin">
+              SIGN UP NOW
+            </Link>{' '}
+            {'.'}
+          </Typography>
+          <Typography variant="body2" color="text.secondary" align="center" sx={{ mb: 4, fontSize: 16 }}>
             {'Copyright © '}
-            <Link color="inherit" href="#">
-              Your Website
+            <Link color="inherit" href="/frontend">
+              Cyberclothing
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}

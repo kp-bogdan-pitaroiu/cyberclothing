@@ -1,10 +1,15 @@
-import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 import Cookies from 'js-cookie';
 import Dashboard from '@/components/Dashboard';
-import BasicTable from '@/components/table';
+import OrderChart from '@/components/OrderChart';
+import BuySellChart from '@/components/BuySellChart';
+import DashboardOrdersTable from '@/components/DashboardOrdersTable';
 import styles from '@/styles/Backend.module.css';
 import CryptoJS from 'crypto-js';
+import { Box, Avatar, Breadcrumbs, Typography, Button } from '@mui/material';
+import { MessageOutlined, PeopleOutline, NavigationOutlined, Inventory2Outlined } from '@mui/icons-material';
+import Link from 'next/link';
 
 interface Vendor {
   email: string;
@@ -70,7 +75,98 @@ export default function Backend(): JSX.Element {
       </Head>
       <div className={styles.main}>
         <Dashboard />
-        <BasicTable />
+        <div style={{ display: 'flex', flexDirection: 'column', width: "100%" }}>
+          <div className={styles.section}>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <h2>DASHBOARD</h2>
+              <h3>Cyberclothing Admin Panel</h3>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <Breadcrumbs aria-label="breadcrumb">
+                <Link color="inherit" href="/frontend">
+                  HOME
+                </Link>
+                <Typography color="text.primary">Dashboard</Typography>
+              </Breadcrumbs>
+            </div>
+          </div>
+          <div className={styles.box}>
+            <ul className={styles.div}>
+              <li>
+                <Box sx={{ bgcolor: "#05e177", p: "30px 40px", borderRadius: 6, mr: 4, mb: 4 }}>
+                  <div style={{ display: 'flex' }}>
+                    <Avatar sx={{ bgcolor: "white", width: "50px", height: "50px" }}>
+                      <NavigationOutlined sx={{ color: "#05e177" }} />
+                    </Avatar>
+                    <div className={styles.boxText}>
+                      <h2>Earnings</h2>
+                      <h3>This Month</h3>
+                      <h3>$ 6659</h3>
+                    </div>
+                  </div>
+                </Box>
+              </li>
+              <li>
+                <Box sx={{ bgcolor: "#999", p: "30px 40px", borderRadius: 6, mr: 4 }}>
+                  <div style={{ display: 'flex' }}>
+                    <Avatar sx={{ bgcolor: "white", width: "60px", height: "60px" }}>
+                      <Inventory2Outlined sx={{ color: "#999" }} />
+                    </Avatar>
+                    <div className={styles.boxText}>
+                      <h2>Products</h2>
+                      <h3>This Month</h3>
+                      <h3># 99</h3>
+                    </div>
+                  </div>
+                </Box>
+              </li>
+              <li>
+                <Box sx={{ bgcolor: "#5098f8", p: "30px 40px", borderRadius: 6, mr: 4 }}>
+                  <div style={{ display: 'flex' }}>
+                    <Avatar sx={{ bgcolor: "white", width: "60px", height: "60px" }}>
+                      <MessageOutlined sx={{ color: "#5098f8" }} />
+                    </Avatar>
+                    <div className={styles.boxText}>
+                      <h2>Messages</h2>
+                      <h3>This Month</h3>
+                      <h3># 33</h3>
+                    </div>
+                  </div>
+                </Box>
+              </li>
+              <li>
+                <Box sx={{ bgcolor: "#b042ff", p: "30px 40px", borderRadius: 6 }}>
+                  <div style={{ display: 'flex' }}>
+                    <Avatar sx={{ bgcolor: "white", width: "60px", height: "60px" }}>
+                      <PeopleOutline sx={{ color: "#b042ff" }} />
+                    </Avatar>
+                    <div className={styles.boxText}>
+                      <h2>Vendors</h2>
+                      <h3>This Month</h3>
+                      <h3># 143</h3>
+                    </div>
+                  </div>
+                </Box>
+              </li>
+            </ul>
+          </div>
+          <ul className={styles.div}>
+            <li><OrderChart /></li>
+            <li>
+              <div style={{ width: 600 }}>
+                <DashboardOrdersTable />
+                <Link href="/backend/orders">
+                  <Button variant='contained' sx={{ mt: 1 }}>
+                    VIEW ALL ORDERS
+                  </Button>
+                </Link>
+              </div>
+            </li>
+          </ul>
+          <div className={styles.bschart}>
+            <BuySellChart />
+          </div>
+        </div>
       </div>
     </>
   );
