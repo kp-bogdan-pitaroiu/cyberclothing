@@ -3,6 +3,15 @@ import { Box, Collapse, IconButton, Table, TableBody, TableCell, TableContainer,
 import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
 import Link from 'next/link';
 import styles from '@/styles/Orders.module.css';
+import DropdownOrderStatus from '@/components/DropdownOrderStatus';
+
+interface Product {
+    id: number;
+    name: string;
+    photo: string;
+    quantity: number;
+    status: string;
+}
 
 interface Order {
     id: number;
@@ -12,12 +21,7 @@ interface Order {
     address: string;
     price: number;
     status: string;
-    products: {
-        id: number;
-        name: string;
-        photo: string;
-        quantity: number;
-    }[];
+    products: Product[];
 }
 
 function CollapsibleTable() {
@@ -46,6 +50,27 @@ function CollapsibleTable() {
     }, []);
 
     const paginatedData = data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
+
+    const handleStatusUpdate = async (orderId: number, newStatus: string) => {
+        try {
+            const response = await fetch(`/api/updateOrderStatus`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ orderId, newStatus }),
+            });
+
+            if (response.ok) {
+                const updatedData = data.map((item) => (item.id === orderId ? { ...item, status: newStatus } : item));
+                setData(updatedData);
+            } else {
+                throw new Error('Error updating order status');
+            }
+        } catch (error) {
+            console.log('Error updating order status:', error);
+        }
+    };
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
@@ -93,11 +118,17 @@ function CollapsibleTable() {
                     </TableHead>
                     <TableBody>
                         {paginatedData.map((order, index) => (
-                            <Row key={order.id} order={order} open={openRows[index]} setOpen={(isOpen: boolean) => {
-                                const newOpenRows = [...openRows];
-                                newOpenRows[index] = isOpen;
-                                setOpenRows(newOpenRows);
-                            }} />
+                            <Row
+                                key={order.id}
+                                order={order}
+                                open={openRows[index]}
+                                setOpen={(isOpen: boolean) => {
+                                    const newOpenRows = [...openRows];
+                                    newOpenRows[index] = isOpen;
+                                    setOpenRows(newOpenRows);
+                                }}
+                                updateStatus={(newStatus: string) => handleStatusUpdate(order.id, newStatus)}
+                            />
                         ))}
                     </TableBody>
                 </Table>
@@ -116,18 +147,19 @@ function CollapsibleTable() {
     );
 }
 
+function Row(props: {
+    order: Order;
+    open: boolean;
+    setOpen: (open: boolean) => void;
+    updateStatus: (newStatus: string) => void;
+}) {
+    const { order, open, setOpen, updateStatus } = props;
 
-function Row(props: { order: any; open: boolean; setOpen: (open: boolean) => void }) {
-    const { order, open, setOpen } = props;
     return (
         <>
             <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
                 <TableCell>
-                    <IconButton
-                        aria-label="expand row"
-                        size='small'
-                        onClick={() => setOpen(!open)}
-                    >
+                    <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
                         {open ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
                     </IconButton>
                 </TableCell>
@@ -139,7 +171,9 @@ function Row(props: { order: any; open: boolean; setOpen: (open: boolean) => voi
                 <TableCell align="center">{order.phoneNumber}</TableCell>
                 <TableCell align="center">{order.address}</TableCell>
                 <TableCell align="center">${order.price}</TableCell>
-                <TableCell align="center">{order.status}</TableCell>
+                <TableCell align="center">
+                    <DropdownOrderStatus currentStatus={order.status} updateStatus={updateStatus} orderId={order.id} />
+                </TableCell>
             </TableRow>
             <TableRow>
                 <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={8}>

@@ -100,9 +100,9 @@ function LoginPage(): JSX.Element {
             </Button>
           </form>
           <Typography variant="body2" color="text.secondary" align="center" sx={{ mt: 8, fontSize: 20 }}>
-            {"If you don't have an account go to "}
+            {"If you don't have an account "}
             <Link color="inherit" href="/backend/signin">
-              Signin
+              SIGN UP NOW
             </Link>{' '}
             {'.'}
           </Typography>

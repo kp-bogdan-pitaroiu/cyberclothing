@@ -139,10 +139,37 @@
 
 .delete:hover {
     color: red;
-    background-color: transparent;
+    background-color: transparent !important;
 }
 
 .edit:hover {
     color: green;
-    background-color: transparent;
+    background-color: transparent !important;
+}
+
+.select::before {
+    border-bottom: none !important;
+}
+
+.select::after {
+    border-bottom: none !important;
+}
+
+.inprogress,
+.lowquantity {
+    color: orange;
+}
+
+.delivered,
+.instock {
+    color: green;
+}
+
+.canceled,
+.deleted {
+    color: red;
+}
+
+.notavailable {
+    color: gray,
 }

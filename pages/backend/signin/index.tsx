@@ -38,6 +38,7 @@ const SignIn = () => {
                 setEmail('');
                 setPassword('');
                 console.log('User registered successfully!');
+                window.location.href = '/backend/login';
             } else {
                 console.error('Failed to register user');
             }
@@ -99,7 +100,7 @@ const SignIn = () => {
                             onChange={handlePasswordChange}
                         />
                         <Button className={styles.btn} fullWidth type="submit" variant="contained">
-                            SIGN IN
+                            REGISTER
                         </Button>
                     </form>
                     <Typography variant="body2" color="text.secondary" align="center" sx={{ mt: 8, fontSize: 20 }}>

@@ -52,5 +52,17 @@
     "name": "Dan",
     "email": "dan.dobre@gmail.com",
     "password": "123Dan1234"
+  },
+  {
+    "id": 10,
+    "name": "George",
+    "email": "george@gmail.com",
+    "password": "123George1234"
+  },
+  {
+    "id": 11,
+    "name": "Victor",
+    "email": "victor@gmail.com",
+    "password": "123Victor1234"
   }
 ]

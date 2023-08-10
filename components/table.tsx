@@ -9,7 +9,7 @@ import Paper from "@mui/material/Paper";
 import styles from "@/styles/Table.module.css";
 import TablePagination from "@mui/material/TablePagination";
 import { rows } from "./tablerows";
-import { Button } from "@mui/material";
+import { Button, Breadcrumbs, Typography } from "@mui/material";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import CreateOutlinedIcon from "@mui/icons-material/CreateOutlined";
 import cerculete from "@/styles/CerculeteColorate.module.css";
@@ -20,6 +20,7 @@ import Dialogmodal from "./Dialogmodal";
 import EditIcon from '@mui/icons-material/Edit';
 import { productInt } from "./Interface";
 import SubcategoryPopup from '@/components/popupbutton';
+import Link from "next/link";
 
 
 const BasicTable = () => {
@@ -72,11 +73,22 @@ const BasicTable = () => {
 
   return (
     <div className={styles.main}>
-      <div className={styles.header}>
-        <h2>Products Sub Category</h2>
-        <SubcategoryPopup variant="table" />
+      <div className={styles.section}>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <h2>DASHBOARD</h2>
+          <h3>Cyberclothing Admin Panel</h3>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <Breadcrumbs aria-label="breadcrumb">
+            <Link color="inherit" href="/frontend">
+              HOME
+            </Link>
+            <Typography color="text.primary">Dashboard</Typography>
+          </Breadcrumbs>
+          <SubcategoryPopup variant="table" />
+        </div>
       </div>
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} sx={{ borderRadius: '0px' }}>
         <Dialogmodal isOpen={modalOpen} product={selectedRow} closeHandler={handleClose} handleEditProduct={handleEditProduct} />
         <Table
           className={styles.tableList}

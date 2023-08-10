@@ -37,7 +37,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
             phoneNumber,
             address,
             price,
-            status: "In progress",
+            status: "in progress",
             products,
         };
         try {
